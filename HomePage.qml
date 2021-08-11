@@ -5,10 +5,10 @@ Page {
     width: window.width
     height: window.height
 
-    title: qsTr("我的收藏")
+    title: qsTr("主页")
 
     Label {
-        text: qsTr("You are on Page 1.")
+        text: qsTr("首页建设中...")
         anchors.centerIn: parent
     }
 }

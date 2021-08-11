@@ -39,10 +39,19 @@ ApplicationWindow {
             anchors.fill: parent
 
             ItemDelegate {
+                text: qsTr("搜索")
+                width: parent.width
+                onClicked: {
+                    stackView.push("SearchForm.qml")
+                    drawer.close()
+                }
+            }
+
+            ItemDelegate {
                 text: qsTr("我的收藏")
                 width: parent.width
                 onClicked: {
-                    stackView.push("MyFavorite.ui.qml")
+                    stackView.push("MyFavorite.qml")
                     drawer.close()
                 }
             }
@@ -50,7 +59,7 @@ ApplicationWindow {
                 text: qsTr("设置")
                 width: parent.width
                 onClicked: {
-                    stackView.push("Settings.ui.qml")
+                    stackView.push("Settings.qml")
                     drawer.close()
                 }
             }
@@ -59,7 +68,7 @@ ApplicationWindow {
 
     StackView {
         id: stackView
-        initialItem: "HomeForm.ui.qml"
+        initialItem: "HomePage.qml"
         anchors.fill: parent
     }
 }

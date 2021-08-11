@@ -1,6 +1,6 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
-
+#include "sannyocomics.h"
 
 int main(int argc, char *argv[])
 {
@@ -9,6 +9,8 @@ int main(int argc, char *argv[])
 #endif
 
     QGuiApplication app(argc, argv);
+
+    qmlRegisterType<SannyoComics>("SannyoComics", 1, 0, "SannyoComics");
 
     QQmlApplicationEngine engine;
     const QUrl url(QStringLiteral("qrc:/main.qml"));
